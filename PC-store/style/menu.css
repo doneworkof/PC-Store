@@ -1,0 +1,136 @@
+header {
+    position:fixed;
+    width:100%;
+    z-index:5;
+}
+
+div.menu {
+    width:100%;
+    box-shadow: 0px 0px 5px 0px black;
+    height:50px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-sizing: border-box;
+    transition:border-bottom-right-radius .35s;
+    z-index:4;
+    background:white;
+}
+
+div.logo {
+    position:absolute;
+    display:flex;
+    align-items:center;
+    left:2%;
+
+}
+
+div.logo img {
+    width:38px;
+    height:38px;
+    user-select: none;
+    pointer-events: none;
+}
+
+div.logo h1 {
+    font-size:30px;
+    font-weight: normal;
+    user-select: none;
+    cursor:default;
+    margin-left:15px;
+}
+
+nav {
+    display: flex;
+    right:10%;
+}
+
+nav.compact {
+    position:absolute;
+    top:0px;
+    transform:translate(0%,-100%);
+    padding:12px 15px;
+    flex-direction:column;
+    align-items: center;
+    box-shadow:0px 0px 4px 0px black;
+    border-bottom-left-radius: 20px;
+    background:white;
+    right:0;
+    z-index:-1;
+}
+
+@keyframes open {
+    from {
+        top:0;
+        transform:translate(0%,-100%);
+    }
+    to {
+        top:50px;
+        transform:none;
+    }
+}
+
+@keyframes close {
+    from {
+        top:50px;
+        transform:none;
+    }
+    to {
+        top:0;
+        transform:translate(0%,-100%);
+    }
+}
+
+.compact a:not(:first-child) {
+    margin-left:0;
+    margin-top:6px; 
+}
+
+nav a {
+    color:black;
+    font-size:20px;
+    text-decoration: none;
+    user-select: none;
+}
+
+nav a:not(:first-child) {
+    margin-left:30px;
+}
+
+nav a.underlined {
+    text-decoration: underline;
+}
+
+div.buttons {
+    display:flex;
+    position:absolute;
+    align-items: center;
+    right:2%;
+}
+
+.cart,.burger {
+    width:38px;
+    height:38px;
+    border-radius: 10px;
+    background-position:center;
+    background-repeat: no-repeat;
+    border:none;
+    background-color:white;
+    outline:none;
+    cursor:pointer;
+
+}
+
+.cart {
+    background-image:url("https://image.flaticon.com/icons/png/512/263/263142.png");
+    background-size:90% 90%;
+}
+
+.burger {
+    background-image:url("https://azbukon.ru/images/toggle.png");
+    background-size:100% 100%;
+    margin-left:15px;
+    display: none;
+}

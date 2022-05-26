@@ -1,0 +1,157 @@
+.floating-wrapper {
+    top:0;
+    left:0;
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    visibility: hidden;
+    opacity: 0;
+    z-index:10;
+    background:#00000080;
+    width:100%;
+    height:100%;
+}
+
+.floating-window {
+    width:1000px;
+    height:720px;
+    background:white;
+    border-radius:20px;
+    box-shadow:0px 0px 5px 0px black;
+    max-width:100%;
+    max-height:90%;
+    overflow:hidden;
+}
+
+.layout {
+    display:none;
+}
+
+.CI-content{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    height:100%;
+}
+
+.CI-paybutton {
+    margin-top:20px;
+    margin-bottom:12px;
+    padding:5px 20px;
+}
+
+.CI-header {
+    font-size:40px;
+    margin-top:10px;
+}
+
+.CI-grid {
+    background:#dbdbdb;
+    box-shadow: 0px 0px 10px 6px inset white;
+    width:1196px;
+    max-width: 100%;
+    height:620px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    padding:10px 10px;
+    box-sizing: border-box;
+}
+
+.CI-grid .item {
+    cursor:default;
+}
+
+.II-content {
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+}
+
+.II-img {
+    align-self:center;
+    height:60%;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.II-imgblock {
+    width: 50%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.closebutton {
+    position:absolute;
+    top:10px;
+    right:10px;
+    width:35px;
+    height:35px;
+}
+
+.II-textblock {
+    position: relative;
+    background:#dbdbdb;
+    box-shadow:0px 0px 10px 6px white inset;
+    width: 50%;
+    height:100%;
+    box-sizing: border-box;
+    padding:10px 20px;
+}
+
+.II-tocartbutton {
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    padding:5px 20px;
+}
+
+.II-name {
+    max-width:90%;
+    word-wrap: break-word;
+}
+
+.II-description {
+    font:normal 20px monospace;
+    max-width:100%;
+}
+
+@media(max-width:575px) {
+    .II-imgblock {
+        position:absolute;
+        width:100%;
+        height:100%;
+    }
+    .II-textblock {
+        width:100%;
+        background:#ffffffa4;
+        padding:10px 30px;
+    }
+}
+
+@keyframes OpenFw {
+    from {
+        visibility: hidden;
+        opacity:0;
+    }
+    to {
+        visibility: visible;
+        opacity:1;
+    }
+}
+
+@keyframes CloseFw {
+    from {
+        visibility: visible;
+        opacity:1;
+    }
+    to {
+        visibility: hidden;
+        opacity:0;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PC-Store | Главная</title>
+        <link href="style\main.css" rel="stylesheet" type="text/css">
+        <link href="style\menu.css" rel="stylesheet" type="text/css">
+        <link href="style\floating-window.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <div class="menu">
+                <div class="logo">
+                    <img src="https://cdn-icons-png.flaticon.com/512/962/962023.png">
+                    <h1>PC-Store</h1>
+                </div>
+                <nav>
+                    <a class="underlined" href="index.html">Главная</a>
+                    <a href="donePC.html">Сборки</a>
+                    <a href="parts.html">Комплектующие</a>
+                    <a href="accessories.html">Аксесуары</a>
+                    <a href="about.html">О нас</a>
+                </nav>
+                <div class="buttons">
+                    <input type="button" class="cart">
+                    <input type="button" class="burger">
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="whoAreWe">
+                <img src="https://i.pinimg.com/originals/05/24/00/05240080c1f4e3aa65947bb8d792367d.jpg">
+                <div class="textblock">
+                    <h1>Кто мы такие?</h1>
+                    <p class="text paragraph">«PC-store» – одна из крупнейших сетей магазинов пк и их комлектующих. На рынке с 2007 года. В инфраструктуре компании интернет-магазин, более 300 магазинов и пунктов выдачи заказов в 106 городах России. В продуктовом портфеле порядка 800 мировых брендов и 100 наименований компьютерной, цифровой, техники.</p>
+                </div>
+            </div>
+            <h1 class="heavy">Рекомендации</h1>
+            <div class="groupsHolder"></div>
+        </main>
+
+        <footer>
+            <img src="https://cdn-icons-png.flaticon.com/512/962/962023.png">
+        </footer>
+
+        <div class="floating-wrapper">
+            <div class="floating-window">
+
+            </div>
+        </div>
+
+        <!--CART INTERFACE-->
+        <div class="layout" id="cart-interface" style="width:1200px;height:800px;">
+            <div class="CI-content">
+                <input type="button" class="button closebutton" value="x" onclick="Toggle(false)">
+                <h1 class="CI-header">Корзина</h1>
+                <div class="grid CI-grid">
+
+                </div>
+                <input type="button" class="button CI-paybutton" value="Оплатить" onclick="Pay()">
+            </div>
+        </div>
+
+        <!--ITEM INFO INTERFACE-->
+
+        <div class="layout" id="item-info" style="width:850px;height:500px;">
+            <div class="II-content">
+                <div class="II-imgblock">
+                    <img class="II-img" src="">
+                </div>
+                <div class="II-textblock">
+                    <input type="button" class="button closebutton" value="x" onclick="Toggle(false)">
+                    <h1 class="II-name">NAMEasdfasdfasdfasdfasdfasdf</h1>
+                    <p class="II-description">Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe alias corrupti rem earum ut iure aspernatur nostrum quas necessitatibus? Odit unde quo quasi, voluptas saepe ea! Sunt, voluptate provident. Quaerat!</p>
+                    <input type="button" class="button II-tocartbutton" value="В корзину">
+                </div>
+            </div>
+        </div>
+
+        <h1 class="alert">ALERT</h1>
+
+        <script src="js\floatingWindow.js"></script>
+        <script src="js\items.js"></script>
+        <script src="js\script.js"></script>
+        <script>
+            BuildRecommendations();
+        </script>
+    </body>
+</html>

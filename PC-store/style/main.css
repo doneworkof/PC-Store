@@ -1,0 +1,271 @@
+body {
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+h1,a,p,input {
+    font-family: monospace;
+}
+
+.button {
+    outline:none;
+    border:none;
+    box-shadow:0px 0px 4px 0px black;
+    border-radius:20px;
+    font-size:22px;
+    background-color:#eeeeee;
+    cursor:pointer;
+    transition:background-color .33s;
+}
+
+.inputfield {
+    outline:none;
+    border:none;
+    box-shadow:0px 0px 4px 0px black;
+    border-radius:20px;
+    font-size:22px;
+    background-color:#eeeeee;
+    height:30px;
+    padding: 0px 15px;
+}
+
+.button:hover {
+    background-color:#cccccc;
+}
+
+p.text {
+    font-size:20px;
+
+}
+
+p.paragraph {
+    margin-top:11px;
+    text-indent: 35px;
+}
+
+h1.heavy {
+    margin-top:50px;
+    margin-bottom:25px;
+    font-size:47px;
+}
+
+main {
+    position:relative;
+    top:70px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.article {
+    width:1000px;
+    max-width:100%;
+    box-sizing:border-box;
+    padding:0px 30px;
+    left:50%;
+    transform:translate(-50%);
+}
+
+.whoAreWe {
+    margin-top:20px;
+    max-width:95%;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.whoAreWe img {
+    width:450px;
+    max-width:100%;
+}
+
+.whoAreWe h1 {
+    font-size:30px;
+}
+
+.whoAreWe p {
+    width:450px;
+    max-width:100%;
+}
+
+div.groupsHolder {
+    margin-top:40px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.itemGroup {
+    margin-top:110px;
+    width:1176px;
+    max-width:100%;
+}
+
+div.itemGroup:first-child {
+    margin-top:0px;
+}
+
+div.grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,285px);
+    grid-template-rows: repeat(auto-fit,285px);
+    margin-top:25px;
+    gap:12px;
+    justify-content: center;
+}
+
+.groupHeader {
+    font-size:45px;
+    margin-top:0;
+    margin-left:70px;
+    margin-bottom:10px;
+    max-width: 100%;
+}
+
+div.item {
+    position:relative;
+    width:285px;
+    height:285px;
+    background:white;
+
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    transition:box-shadow .4s;
+    cursor:pointer;
+}
+
+div.item:hover {
+    box-shadow:0px 0px 6px 0px black;
+}
+
+.item img {
+    max-width:271px;
+    object-fit: cover;
+    margin-top:7px;
+    height:210px;
+    
+    pointer-events: none;
+    user-select: none;
+}
+
+.item h1 {
+    margin-top:9px; 
+    margin-bottom:0;
+    font-size:21px;
+    font-weight: normal;
+    align-self:flex-start;
+    margin-left:8px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width:270px;
+}
+
+.item h2 {
+    font:normal 22px monospace;
+    align-self:flex-start;
+    margin-left:8px;
+    margin-top:3px; 
+    margin-bottom:0;
+}
+
+footer {
+    width:100%;
+    height:210px;
+    background:#929292;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    box-shadow:0px 0px 10px 5px #929292;
+    margin-top:200px;
+}
+
+footer img {
+    width:130px;
+    height:130px;
+    filter:invert(1);
+    user-select: none;
+    pointer-events: none;
+}
+
+
+.alert {
+    position:fixed;
+    left:50%;
+    transform:translate(-50%);
+    top:175px;
+    z-index:12;
+    font:bold 50px monospace;
+    color:white;
+    text-shadow:0px 0px 15px black;
+    user-select: none;
+    cursor: default;
+    opacity: 0;
+    visibility: hidden;
+    max-width:100%;
+    text-align:center;
+
+}
+
+@keyframes alertAnimation {
+    from {
+        top:120px;
+        opacity: 0;
+        visibility: visible;
+    }
+    50% {
+        top:170px;
+        opacity: 1;
+    }
+    to {
+        top:200px;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.noelements {
+    position:absolute;
+    margin-top:10px;
+    font:bold 20px monospace;
+    left:50%;
+    transform:translate(-50%);
+    color:#2a2a2a;
+    cursor: default;
+    user-select: none;
+    text-align:center;
+}
+
+
+@media(max-width:1170px) {
+    .groupHeader {
+        text-align:center;
+        margin:0;
+    }
+}
+@media(max-width:937px) {
+    .whoAreWe .textblock h1 {
+        text-align:center;
+    }
+}
+
+@media(max-width:480px) {
+    .whoAreWe .textblock p {
+        text-align:justify;
+        width:95%;
+    }
+}
+
+@media(max-width:575px) {
+    h1.heavy {
+        font-size:44px;
+    }
+    .groupHeader {
+        font-size:41px;
+    }
+
+}
